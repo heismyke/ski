@@ -1,0 +1,154 @@
+* {
+  margin: $universal_margin;
+  padding: $universal_padding;
+  box-sizing: $universal_boxSizing;
+}
+
+%metabar_list_item_box {
+  width: $metabar_list_itemWidth;
+  height: $metabar_list_itemHeight;
+  background-color: $metabar_list_itemColor;
+}
+@mixin center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media only screen and (min-width: 901px) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}. Please use 'phone', 'tablet', or 'desktop'.";
+  }
+}
+header {
+  width: $header_width;
+  height: $header_height;
+  // background-color: $header_backgroundColor;
+
+  .metabar {
+    width: $metabar_width;
+    height: $metabar_height;
+    background-color: $metabar_backgroundColor;
+    padding-left: 40px;
+    @include respond-to(phone) {
+      height: 30px;
+      padding-left: 0;
+    }
+  }
+  .metabar_list {
+    width: $metabar_listWidth;
+    height: $metabar_listHeight;
+    background-color: $metabar_listBackgroundColor;
+    @include center-element();
+    display: flex;
+    @include respond-to(phone) {
+      height: 30px;
+      width: 100%;
+      display: block;
+    }
+    @include respond-to(tablet) {
+      width: 60%;
+    }
+
+    .metabar_list_item {
+      @extend %metabar_list_item_box;
+      width: 15%;
+      @include center-element();
+      color: white;
+      border-right: 0.1px solid grey;
+      @include respond-to(phone) {
+        display: none;
+      }
+      @include respond-to(tablet) {
+        font-size: 13px;
+      }
+    }
+
+    .metabar_list_item_two {
+      @extend %metabar_list_item_box;
+      background-color: none;
+      border-right: 0.1px solid grey;
+      width: 15%;
+      @include center-element();
+      color: white;
+      @include respond-to(phone) {
+        display: none;
+      }
+      @include respond-to(tablet) {
+        font-size: 13px;
+      }
+    }
+    .metabar_list_item_three {
+      @extend %metabar_list_item_box;
+      background-color: none;
+      width: 15%;
+      border-right: 0.1px solid grey;
+      @include center-element();
+      color: white;
+      @include respond-to(phone) {
+        display: none;
+      }
+      @include respond-to(tablet) {
+        font-size: 13px;
+      }
+    }
+    .metabar_list_item_four {
+      @extend %metabar_list_item_box;
+      background-color: none;
+      border-right: 0.1px solid grey;
+      width: 15%;
+      @include center-element();
+      color: white;
+      @include respond-to(phone) {
+        height: 30px;
+      }
+      @include respond-to(tablet) {
+        font-size: 13px;
+      }
+    }
+    .switch {
+      width: $switchWidth;
+      height: $switchHeight;
+      background-color: $switchbackgroundColor;
+      border-radius: 20px;
+      display: flex;
+      padding: 2px;
+      gap: 20px;
+      align-items: center;
+
+      .switch-round {
+        background-color: $base_color;
+        color: white;
+        border-radius: 15px;
+        width: 50%;
+        height: 26px;
+        @include center-element();
+      }
+    }
+    .metabar_list_item_five {
+      @extend %metabar_list_item_box;
+      background-color: none;
+      width: 40%;
+      @include center-element();
+      color: black;
+      @include respond-to(phone) {
+        display: none;
+      }
+      @include respond-to(tablet) {
+        font-size: 13px;
+        width: 50%;
+      }
+    }
+  }
+}
