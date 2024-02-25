@@ -286,5 +286,23 @@ nav {
     height: 250px;
   }
 }
+.teaser-grid .boxImage1 {
+  background-image: url(../../images/teasergridImages.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.teaser-grid .boxImage2 {
+  background-image: url(../../images/teasergrid2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.teaser-grid .boxImage3 {
+  background-image: url(../../images/teasergrid3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /*# sourceMappingURL=styles.css.map */

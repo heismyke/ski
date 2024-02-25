@@ -23,4 +23,23 @@
       height: 250px;
     }
   }
+
+  .boxImage1 {
+    background-image: url(../../images/teasergridImages.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .boxImage2 {
+    background-image: url(../../images/teasergrid2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .boxImage3 {
+    background-image: url(../../images/teasergrid3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
