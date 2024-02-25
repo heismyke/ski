@@ -1,8 +1,13 @@
+@import 'base/BreadCrumbVariables.scss';
 @import 'base/BannerVariables.scss';
 @import 'base/Header_MetaVariables.scss';
 @import 'base/NavbarVariables.scss';
 
 
+@import 'components/BreadCrumb.scss';
 @import 'components/Banner';
+@import 'components/ContentBlock.scss';
 @import 'components/header';
 @import 'components/Navbar';
+@import 'components/HeadlineBlock.scss';
+@import 'layouts/headline-block-grid.scss';

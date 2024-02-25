@@ -15,18 +15,19 @@
     @error "Invalid breakpoint: #{$breakpoint}. Please use 'phone', 'tablet', or 'desktop'.";
   }
 }
+.content-block {
+  width: 80%;
+  height: 600px;
+  //   background-color: red;
+  margin: auto;
+  margin-top: 100px;
 
-.banner {
-  background-image: $banner_background_image;
-  width: $banner_width;
-  height: $banner_height;
-  background-size: $banner_background_size;
-  background-repeat: $banner_background_repeat;
-  background-position: $banner_background_position;
   @include respond-to(phone) {
-    height: 400px;
+    height: 1200px;
+    width: 90%;
   }
   @include respond-to(tablet) {
-    height: 400px;
+    width: 95%;
+    height: 300px;
   }
 }

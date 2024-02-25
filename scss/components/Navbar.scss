@@ -1,5 +1,30 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media only screen and (min-width: 601px) and (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media only screen and (min-width: 901px) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}. Please use 'phone', 'tablet', or 'desktop'.";
+  }
+}
+
 nav {
   width: $navbar_width;
   height: $navbar_height;
   background-color: $navbar_backgroundColor;
+
+  @include respond-to(phone) {
+    height: 50px;
+  }
+  @include respond-to(tablet) {
+    height: 60px;
+  }
 }
