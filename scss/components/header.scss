@@ -3,6 +3,11 @@
   padding: $universal_padding;
   box-sizing: $universal_boxSizing;
 }
+%flex_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 %metabar_list_item_box {
   width: $metabar_list_itemWidth;
@@ -34,8 +39,14 @@
 header {
   width: $header_width;
   height: $header_height;
-  // background-color: $header_backgroundColor;
+  // background-color: green;
 
+  @include respond-to(phone) {
+    height: 450px;
+  }
+  @include respond-to(tablet) {
+    height: 500px;
+  }
   .metabar {
     width: $metabar_width;
     height: $metabar_height;
@@ -149,6 +160,54 @@ header {
         font-size: 13px;
         width: 50%;
       }
+    }
+  }
+}
+
+.text-salzburg-header {
+  width: 80%;
+  height: 70px;
+  // background-color: orange;
+  margin: auto;
+  font-size: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: $metabar_backgroundColor;
+
+  @include respond-to(phone) {
+    width: 90%;
+    margin-top: 40px;
+  }
+  @include respond-to(tablet) {
+    width: 90%;
+    margin-top: 40px;
+  }
+}
+
+.text-salzburg {
+  width: 50%;
+  height: 300px;
+  margin: auto;
+  // background-color: purple;
+  @include center-element();
+  p {
+    width: 100%;
+    font-size: 20px;
+  }
+  @include respond-to(phone) {
+    width: 90%;
+    margin-top: 30px;
+    p {
+      width: 100%;
+      font-size: 15px;
+    }
+  }
+  @include respond-to(tablet) {
+    width: 90%;
+    p {
+      width: 100%;
+      font-size: 20px;
     }
   }
 }

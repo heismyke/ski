@@ -3,7 +3,6 @@
 @import 'base/Header_MetaVariables.scss';
 @import 'base/NavbarVariables.scss';
 
-
 @import 'components/BreadCrumb.scss';
 @import 'components/Banner';
 @import 'components/ContentBlock.scss';
@@ -11,3 +10,117 @@
 @import 'components/Navbar';
 @import 'components/HeadlineBlock.scss';
 @import 'layouts/headline-block-grid.scss';
+
+.outer-carousel {
+  width: 50%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   background-color: orange;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include respond-to(phone) {
+    width: 100%;
+    height: 400px;
+  }
+  @include respond-to(tablet) {
+    width: 100%;
+    height: 400px;
+  }
+}
+.buttonDiv {
+  width: 10%;
+  height: 500px;
+  //   background-color: grey;
+  @include center-element;
+  .btn {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    outline: 0.5px solid black;
+  }
+}
+.carousel {
+  width: 80%;
+  //   background-color: red;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  height: 500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  @include respond-to(phone) {
+    height: 400px;
+  }
+
+  .box-caro {
+    width: 300px;
+    height: 500px;
+    background-color: lightgray;
+    @include respond-to(phone) {
+      height: 400px;
+    }
+    @include respond-to(tablet) {
+      height: 400px;
+    }
+  }
+}
+.highlights-container {
+  width: 100%;
+  height: 700px;
+  //   background-color: red;
+  @include respond-to(phone) {
+    height: 1000px;
+  }
+  @include respond-to(tablet) {
+    height: 1000px;
+  }
+  .highlights-header {
+    // background-color: beige;
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    @include center-element;
+    @include respond-to(phone) {
+      height: 150px;
+    }
+    h1 {
+      font-size: 40px;
+      color: $metabar_backgroundColor;
+      @include respond-to(phone) {
+        font-size: 35px;
+      }
+    }
+  }
+  .highlights-carousel-parent {
+    width: 100%;
+    height: 600px;
+    // background-color: aqua;
+    position: relative;
+    @include respond-to(phone) {
+      height: 750px;
+    }
+    @include respond-to(tablet) {
+      height: 800px;
+    }
+  }
+  .highlights-image {
+    width: 70%;
+    height: 600px;
+    background-color: dimgrey;
+    @include respond-to(phone) {
+      height: 300px;
+      width: 100%;
+    }
+    @include respond-to(tablet) {
+      height: 350px;
+      width: 100%;
+    }
+  }
+}

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ski</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script
+      src="https://kit.fontawesome.com/bcf7712443.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -39,20 +44,84 @@
         <div class="navlist_div_right"></div>
       </nav>
       <div class="banner"></div>
-      <div class="content-block">
-        <div class="container">
-          <div class="headline-block">
-            <h2 class="headline-block-text">
-              Let's go skiing! 12 Peaks. 5 Valleys
-            </h2>
+    </header>
+    <div class="content-block">
+      <div class="container">
+        <div
+          class="headline-block wow slideInLeft"
+          data-wow-duration="2s"
+          data-wow-delay="5s"
+        >
+          <h2 class="headline-block-text">
+            Let's go skiing! 12 Peaks. 5 Valleys
+          </h2>
+        </div>
+        <div class="teaser-grid">
+          <div class="box boxImage1"></div>
+          <div class="box boxImage2"></div>
+          <div class="box boxImage3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-salzburg-header">
+      <h1>Snow Space Salzburg</h1>
+    </div>
+    <div class="text-salzburg">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias ea
+        molestiae ullam nemo molestias non, dolorem similique. Deserunt
+        voluptatibus perspiciatis, dolores at fugiat mollitia tenetur, placeat
+        laboriosam ab id laborum nemo magnam eveniet ex ad unde commodi,
+        praesentium aspernatur. Repellat suscipit, nulla tempora exercitationem
+        at quam itaque nobis reiciendis officia, quod, recusandae voluptatem
+        quis eaque! Similique corporis earum doloribus quos esse ea nostrum
+        quidem, in impedit obcaecati fuga cum et laborum ab sequi optio cumque
+        consequatur rerum dolore laboriosam minima. Porro numquam repellendus,
+        animi, dolorum libero odio et sint sapiente deleniti earum voluptatem!
+        Voluptatem explicabo quam mollitia omnis natus.
+      </p>
+    </div>
+    <div class="highlights-container">
+      <div class="highlights-header">
+        <h1>Event Highlights in Flachau,Wargrain &St. Johann</h1>
+      </div>
+      <div class="highlights-carousel-parent">
+        <div class="highlights-image"></div>
+        <div class="outer-carousel">
+          <div class="buttonDiv">
+            <button id="decrement" class="btn">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
           </div>
-          <div class="teaser-grid">
-            <div class="box boxImage1"></div>
-            <div class="box boxImage2"></div>
-            <div class="box boxImage3"></div>
+          <div class="carousel" id="carousel">
+            <div class="box-caro">1</div>
+            <div class="box-caro">2</div>
+            <div class="box-caro">3</div>
+            <div class="box-caro">4</div>
+            <div class="box-caro">5</div>
+            <div class="box-caro">6</div>
+          </div>
+          <div class="buttonDiv">
+            <button id="increment" class="btn">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   </body>
+
+  <script>
+    var incrementButton = document.getElementById('increment');
+    var decrementButton = document.getElementById('decrement');
+    var carousel = document.getElementById('carousel');
+    var boxWidth = 350;
+
+    incrementButton.addEventListener('click', () => {
+      carousel.scrollLeft += boxWidth * 2;
+    });
+    decrementButton.addEventListener('click', () => {
+      carousel.scrollLeft -= boxWidth * 2;
+    });
+  </script>
 </html>
